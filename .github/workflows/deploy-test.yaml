@@ -1,12 +1,12 @@
 name: Deploy Test
-
+  
 on:
   push:
     branches: [main]
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: codebuild-github-protection-testing-${{ github.run_id }}-${{ github.run_attempt }}
     environment: production
     steps:
       - run: echo "Deployed!"
