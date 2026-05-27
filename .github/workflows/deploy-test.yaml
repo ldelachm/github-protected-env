@@ -7,6 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: codebuild-github-protection-testing-${{ github.run_id }}-${{ github.run_attempt }}
-    environment: production
+    environment: test
     steps:
       - run: echo "Deployed!"
